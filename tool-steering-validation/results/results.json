@@ -1,0 +1,673 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "cpu",
+  "baseline_accuracy": 1.0,
+  "baseline_records": [
+    {
+      "query": "Will it rain in London today?",
+      "expected": "weather",
+      "predicted": "weather",
+      "correct": true
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "expected": "weather",
+      "predicted": "weather",
+      "correct": true
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "expected": "calculator",
+      "predicted": "calculator",
+      "correct": true
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "expected": "calculator",
+      "predicted": "calculator",
+      "correct": true
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "expected": "translator",
+      "predicted": "translator",
+      "correct": true
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "expected": "translator",
+      "predicted": "translator",
+      "correct": true
+    },
+    {
+      "query": "Search for Python best practices.",
+      "expected": "search",
+      "predicted": "search",
+      "correct": true
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "expected": "search",
+      "predicted": "search",
+      "correct": true
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "expected": "email",
+      "predicted": "email",
+      "correct": true
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "expected": "email",
+      "predicted": "email",
+      "correct": true
+    }
+  ],
+  "cosine_switch_rate": 1.0,
+  "steering_results": [
+    {
+      "query": "Will it rain in London today?",
+      "source": "weather",
+      "target": "calculator",
+      "cos_to_source": 0.9975161552429199,
+      "cos_to_target": 0.9995027184486389,
+      "switched": true
+    },
+    {
+      "query": "Will it rain in London today?",
+      "source": "weather",
+      "target": "translator",
+      "cos_to_source": 0.9986336827278137,
+      "cos_to_target": 0.999506413936615,
+      "switched": true
+    },
+    {
+      "query": "Will it rain in London today?",
+      "source": "weather",
+      "target": "search",
+      "cos_to_source": 0.9990319609642029,
+      "cos_to_target": 0.9995086193084717,
+      "switched": true
+    },
+    {
+      "query": "Will it rain in London today?",
+      "source": "weather",
+      "target": "email",
+      "cos_to_source": 0.9977484345436096,
+      "cos_to_target": 0.9995065331459045,
+      "switched": true
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "source": "weather",
+      "target": "calculator",
+      "cos_to_source": 0.997877299785614,
+      "cos_to_target": 0.999788224697113,
+      "switched": true
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "source": "weather",
+      "target": "translator",
+      "cos_to_source": 0.9990749955177307,
+      "cos_to_target": 0.9997901916503906,
+      "switched": true
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "source": "weather",
+      "target": "search",
+      "cos_to_source": 0.9993665218353271,
+      "cos_to_target": 0.9997910261154175,
+      "switched": true
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "source": "weather",
+      "target": "email",
+      "cos_to_source": 0.9984902739524841,
+      "cos_to_target": 0.9997910857200623,
+      "switched": true
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "source": "calculator",
+      "target": "weather",
+      "cos_to_source": 0.9966807961463928,
+      "cos_to_target": 0.9991578459739685,
+      "switched": true
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "source": "calculator",
+      "target": "translator",
+      "cos_to_source": 0.9967911243438721,
+      "cos_to_target": 0.9991530179977417,
+      "switched": true
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "source": "calculator",
+      "target": "search",
+      "cos_to_source": 0.9965765476226807,
+      "cos_to_target": 0.9991574883460999,
+      "switched": true
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "source": "calculator",
+      "target": "email",
+      "cos_to_source": 0.9959185719490051,
+      "cos_to_target": 0.9991557002067566,
+      "switched": true
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "source": "calculator",
+      "target": "weather",
+      "cos_to_source": 0.9971856474876404,
+      "cos_to_target": 0.9993100762367249,
+      "switched": true
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "source": "calculator",
+      "target": "translator",
+      "cos_to_source": 0.9973658323287964,
+      "cos_to_target": 0.999304473400116,
+      "switched": true
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "source": "calculator",
+      "target": "search",
+      "cos_to_source": 0.9973306655883789,
+      "cos_to_target": 0.9993076920509338,
+      "switched": true
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "source": "calculator",
+      "target": "email",
+      "cos_to_source": 0.9968949556350708,
+      "cos_to_target": 0.9993042945861816,
+      "switched": true
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "source": "translator",
+      "target": "weather",
+      "cos_to_source": 0.998699426651001,
+      "cos_to_target": 0.9996153116226196,
+      "switched": true
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "source": "translator",
+      "target": "calculator",
+      "cos_to_source": 0.9974903464317322,
+      "cos_to_target": 0.999610185623169,
+      "switched": true
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "source": "translator",
+      "target": "search",
+      "cos_to_source": 0.9986119270324707,
+      "cos_to_target": 0.9996148347854614,
+      "switched": true
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "source": "translator",
+      "target": "email",
+      "cos_to_source": 0.998088002204895,
+      "cos_to_target": 0.999613881111145,
+      "switched": true
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "source": "translator",
+      "target": "weather",
+      "cos_to_source": 0.998286783695221,
+      "cos_to_target": 0.9995002746582031,
+      "switched": true
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "source": "translator",
+      "target": "calculator",
+      "cos_to_source": 0.9973419308662415,
+      "cos_to_target": 0.9994938969612122,
+      "switched": true
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "source": "translator",
+      "target": "search",
+      "cos_to_source": 0.9983391761779785,
+      "cos_to_target": 0.9994989037513733,
+      "switched": true
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "source": "translator",
+      "target": "email",
+      "cos_to_source": 0.998026430606842,
+      "cos_to_target": 0.9994972348213196,
+      "switched": true
+    },
+    {
+      "query": "Search for Python best practices.",
+      "source": "search",
+      "target": "weather",
+      "cos_to_source": 0.9992296099662781,
+      "cos_to_target": 0.9995905756950378,
+      "switched": true
+    },
+    {
+      "query": "Search for Python best practices.",
+      "source": "search",
+      "target": "calculator",
+      "cos_to_source": 0.9977366924285889,
+      "cos_to_target": 0.9995847344398499,
+      "switched": true
+    },
+    {
+      "query": "Search for Python best practices.",
+      "source": "search",
+      "target": "translator",
+      "cos_to_source": 0.9987302422523499,
+      "cos_to_target": 0.9995878338813782,
+      "switched": true
+    },
+    {
+      "query": "Search for Python best practices.",
+      "source": "search",
+      "target": "email",
+      "cos_to_source": 0.9982094168663025,
+      "cos_to_target": 0.9995882511138916,
+      "switched": true
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "source": "search",
+      "target": "weather",
+      "cos_to_source": 0.9989202618598938,
+      "cos_to_target": 0.9994438886642456,
+      "switched": true
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "source": "search",
+      "target": "calculator",
+      "cos_to_source": 0.9975965023040771,
+      "cos_to_target": 0.9994369149208069,
+      "switched": true
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "source": "search",
+      "target": "translator",
+      "cos_to_source": 0.9986304640769958,
+      "cos_to_target": 0.9994409084320068,
+      "switched": true
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "source": "search",
+      "target": "email",
+      "cos_to_source": 0.9981078505516052,
+      "cos_to_target": 0.9994417428970337,
+      "switched": true
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "source": "email",
+      "target": "weather",
+      "cos_to_source": 0.9973801374435425,
+      "cos_to_target": 0.9993492960929871,
+      "switched": true
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "source": "email",
+      "target": "calculator",
+      "cos_to_source": 0.9964649677276611,
+      "cos_to_target": 0.9993415474891663,
+      "switched": true
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "source": "email",
+      "target": "translator",
+      "cos_to_source": 0.9976993799209595,
+      "cos_to_target": 0.9993467330932617,
+      "switched": true
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "source": "email",
+      "target": "search",
+      "cos_to_source": 0.9976921677589417,
+      "cos_to_target": 0.9993489384651184,
+      "switched": true
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "source": "email",
+      "target": "weather",
+      "cos_to_source": 0.9973846673965454,
+      "cos_to_target": 0.9995458722114563,
+      "switched": true
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "source": "email",
+      "target": "calculator",
+      "cos_to_source": 0.996555745601654,
+      "cos_to_target": 0.999540388584137,
+      "switched": true
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "source": "email",
+      "target": "translator",
+      "cos_to_source": 0.9977645874023438,
+      "cos_to_target": 0.9995439648628235,
+      "switched": true
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "source": "email",
+      "target": "search",
+      "cos_to_source": 0.9975749254226685,
+      "cos_to_target": 0.9995453953742981,
+      "switched": true
+    }
+  ],
+  "prompt_override_accuracy": 0.325,
+  "prompt_proxy_results": [
+    {
+      "query": "Will it rain in London today?",
+      "source": "weather",
+      "target": "calculator",
+      "predicted": "weather",
+      "correct_override": false
+    },
+    {
+      "query": "Will it rain in London today?",
+      "source": "weather",
+      "target": "translator",
+      "predicted": "translator",
+      "correct_override": true
+    },
+    {
+      "query": "Will it rain in London today?",
+      "source": "weather",
+      "target": "search",
+      "predicted": "search",
+      "correct_override": true
+    },
+    {
+      "query": "Will it rain in London today?",
+      "source": "weather",
+      "target": "email",
+      "predicted": "weather",
+      "correct_override": false
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "source": "weather",
+      "target": "calculator",
+      "predicted": "weather",
+      "correct_override": false
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "source": "weather",
+      "target": "translator",
+      "predicted": "translator",
+      "correct_override": true
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "source": "weather",
+      "target": "search",
+      "predicted": "search",
+      "correct_override": true
+    },
+    {
+      "query": "What's the temperature in Sydney?",
+      "source": "weather",
+      "target": "email",
+      "predicted": "email",
+      "correct_override": true
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "source": "calculator",
+      "target": "weather",
+      "predicted": "calculator",
+      "correct_override": false
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "source": "calculator",
+      "target": "translator",
+      "predicted": "calculator",
+      "correct_override": false
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "source": "calculator",
+      "target": "search",
+      "predicted": "search",
+      "correct_override": true
+    },
+    {
+      "query": "Compute the square root of 144.",
+      "source": "calculator",
+      "target": "email",
+      "predicted": "calculator",
+      "correct_override": false
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "source": "calculator",
+      "target": "weather",
+      "predicted": "calculator",
+      "correct_override": false
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "source": "calculator",
+      "target": "translator",
+      "predicted": "translator",
+      "correct_override": true
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "source": "calculator",
+      "target": "search",
+      "predicted": "search",
+      "correct_override": true
+    },
+    {
+      "query": "What is 2 to the power of 10?",
+      "source": "calculator",
+      "target": "email",
+      "predicted": "email",
+      "correct_override": true
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "source": "translator",
+      "target": "weather",
+      "predicted": "translator",
+      "correct_override": false
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "source": "translator",
+      "target": "calculator",
+      "predicted": "translator",
+      "correct_override": false
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "source": "translator",
+      "target": "search",
+      "predicted": "search",
+      "correct_override": true
+    },
+    {
+      "query": "Convert 'I love you' to German.",
+      "source": "translator",
+      "target": "email",
+      "predicted": "email",
+      "correct_override": true
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "source": "translator",
+      "target": "weather",
+      "predicted": "translator",
+      "correct_override": false
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "source": "translator",
+      "target": "calculator",
+      "predicted": "translator",
+      "correct_override": false
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "source": "translator",
+      "target": "search",
+      "predicted": "translator",
+      "correct_override": false
+    },
+    {
+      "query": "What is 'goodbye' in Italian?",
+      "source": "translator",
+      "target": "email",
+      "predicted": "translator",
+      "correct_override": false
+    },
+    {
+      "query": "Search for Python best practices.",
+      "source": "search",
+      "target": "weather",
+      "predicted": "search",
+      "correct_override": false
+    },
+    {
+      "query": "Search for Python best practices.",
+      "source": "search",
+      "target": "calculator",
+      "predicted": "search",
+      "correct_override": false
+    },
+    {
+      "query": "Search for Python best practices.",
+      "source": "search",
+      "target": "translator",
+      "predicted": "search",
+      "correct_override": false
+    },
+    {
+      "query": "Search for Python best practices.",
+      "source": "search",
+      "target": "email",
+      "predicted": "search",
+      "correct_override": false
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "source": "search",
+      "target": "weather",
+      "predicted": "search",
+      "correct_override": false
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "source": "search",
+      "target": "calculator",
+      "predicted": "search",
+      "correct_override": false
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "source": "search",
+      "target": "translator",
+      "predicted": "translator",
+      "correct_override": true
+    },
+    {
+      "query": "Find reviews of the newest iPhone.",
+      "source": "search",
+      "target": "email",
+      "predicted": "email",
+      "correct_override": true
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "source": "email",
+      "target": "weather",
+      "predicted": "email",
+      "correct_override": false
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "source": "email",
+      "target": "calculator",
+      "predicted": "email",
+      "correct_override": false
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "source": "email",
+      "target": "translator",
+      "predicted": "email",
+      "correct_override": false
+    },
+    {
+      "query": "Send a reminder to dave@example.com.",
+      "source": "email",
+      "target": "search",
+      "predicted": "email",
+      "correct_override": false
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "source": "email",
+      "target": "weather",
+      "predicted": "email",
+      "correct_override": false
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "source": "email",
+      "target": "calculator",
+      "predicted": "email",
+      "correct_override": false
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "source": "email",
+      "target": "translator",
+      "predicted": "email",
+      "correct_override": false
+    },
+    {
+      "query": "Email eve@example.com about the deadline.",
+      "source": "email",
+      "target": "search",
+      "predicted": "email",
+      "correct_override": false
+    }
+  ]
+}

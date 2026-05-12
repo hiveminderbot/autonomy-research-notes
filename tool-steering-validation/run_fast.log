@@ -1,0 +1,40 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:01<05:48,  1.21s/it]Loading weights:  27%|██▋       | 77/290 [00:01<00:03, 70.13it/s]Loading weights:  33%|███▎      | 96/290 [00:01<00:02, 82.54it/s]Loading weights:  39%|███▉      | 114/290 [00:01<00:02, 85.90it/s]Loading weights:  44%|████▍     | 129/290 [00:01<00:01, 93.89it/s]Loading weights:  51%|█████     | 147/290 [00:02<00:01, 102.83it/s]Loading weights:  56%|█████▌    | 161/290 [00:02<00:01, 105.75it/s]Loading weights:  63%|██████▎   | 184/290 [00:02<00:00, 130.69it/s]Loading weights:  71%|███████▏  | 207/290 [00:02<00:00, 140.43it/s]Loading weights:  77%|███████▋  | 224/290 [00:02<00:00, 140.89it/s]Loading weights:  83%|████████▎ | 240/290 [00:02<00:00, 141.02it/s]Loading weights:  88%|████████▊ | 256/290 [00:02<00:00, 141.80it/s]Loading weights:  93%|█████████▎| 271/290 [00:02<00:00, 137.50it/s]Loading weights: 100%|██████████| 290/290 [00:02<00:00, 99.90it/s] 
+Model loaded.
+
+--- Collecting mean activations ---
+  weather: mean computed from 3 queries
+  calculator: mean computed from 3 queries
+  translator: mean computed from 3 queries
+  search: mean computed from 3 queries
+  email: mean computed from 3 queries
+
+--- Baseline accuracy (held-out) ---
+  [weather] Will it rain in London today?                 -> weather ✓
+  [weather] What's the temperature in Sydney?             -> weather ✓
+  [calculator] Compute the square root of 144.               -> calculator ✓
+  [calculator] What is 2 to the power of 10?                 -> calculator ✓
+  [translator] Convert 'I love you' to German.               -> translator ✓
+  [translator] What is 'goodbye' in Italian?                 -> translator ✓
+  [search] Search for Python best practices.             -> search ✓
+  [search] Find reviews of the newest iPhone.            -> search ✓
+  [email] Send a reminder to dave@example.com.          -> email ✓
+  [email] Email eve@example.com about the deadline.     -> email ✓
+Baseline accuracy: 10/10 = 100.0%
+
+--- Cosine steering test ---
+Cosine switch rate: 100.0%
+
+--- Prompt-override proxy ---
+Prompt-override accuracy: 32.5%
+
+Saved to /home/exedev/autonomy/labs/research-notes/tool-steering-validation/results/results.json
+
+========== VERDICT ==========
+Baseline accuracy: 100.0%
+Cosine switch rate: 100.0%
+Prompt-override accuracy: 32.5%
+RECOMMENDATION: ADOPT (with caution)
+=============================

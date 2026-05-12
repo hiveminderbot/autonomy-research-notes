@@ -1,0 +1,4 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<04:31,  1.06it/s]Loading weights:  39%|███▉      | 113/290 [00:01<00:01, 142.13it/s]Loading weights:  56%|█████▌    | 162/290 [00:01<00:00, 155.75it/s]Loading weights:  68%|██████▊   | 197/290 [00:01<00:00, 133.69it/s]Loading weights:  77%|███████▋  | 222/290 [00:02<00:00, 113.31it/s]Loading weights:  83%|████████▎ | 241/290 [00:02<00:00, 64.34it/s] Loading weights:  88%|████████▊ | 255/290 [00:03<00:00, 64.71it/s]Loading weights:  92%|█████████▏| 267/290 [00:03<00:00, 69.52it/s]Loading weights:  96%|█████████▌| 279/290 [00:03<00:00, 69.57it/s]Loading weights: 100%|██████████| 290/290 [00:03<00:00, 85.78it/s]
